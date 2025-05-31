@@ -1,4 +1,5 @@
 const WebSocket = require("ws");
+const port = process.env.PORT || 8080;
 
 /**
  * @typedef {Object} MessageData
@@ -37,8 +38,7 @@ function parseMessage(rawMessage) {
 const onlineUsers = new Map(); // Key: userId, Value: { socket, activeRoomId }
 const rooms = new Map(); // Key: roomId, Value: Set of userIds
 
-// Create a WebSocket server on port 8080
-const wss = new WebSocket.Server({ port: 8080 });
+const wss = new WebSocket.Server({ port });
 
 wss.on("connection", (ws) => {
   console.log("New client connected");
