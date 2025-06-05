@@ -2,6 +2,8 @@
 
 This is the backend WebSocket server for the **Stream-Line** chat application. It handles real-time communication between clients in group and direct chat rooms.
 
+The front-end code can be found here: [Stream-line](https://github.com/arafhossain/stream-line)
+
 ## 🛠️ Tech Stack
 
 - Node.js
